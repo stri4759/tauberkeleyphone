@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+
+<html>
+<link rel="stylesheet" href="founderstyle.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="indexstyle1.css">
+<head lang="en-US">
+	<title>TAU Berkeley</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+</head>
+	
+	<body>
+    <!-- Navigation Bar-->
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Tau</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="tools.html">Games</a>
+        <a href="blogs.html">Blog</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+    </div>
+	 <!-- Body of the Page -->
+	 <br><br><br>
+	 <div id="typewriter">	
+	  <h1>Founding Members</h1>
+	  </div>
+	  <ul class="list-members">
+		<li class="member">
+		  <div class="member-image">
+			<img src="html5up-massively/images/Neel ID2 2.JPG">
+		  </div>
+		  <div class="member-info">
+			<a href="mailto:neel.r.trivedi@gmail.com">
+			  <h3 style="color:black">Neel Trivedi</h3>
+			</a>
+			<p>Founding Member</p>
+	
+		  </div>
+		</li>
+		<li class="member">
+		  <div class="member-image">
+			<img src="html5up-massively/images/Armaan.jpeg">
+		  </div>
+		  <div class="member-info">
+			<a href="mailto:neel.r.trivedi@gmail.com">
+			  <h3 style="color:black">Armaan Nangia</h3>
+			</a>
+			<p>Founding Member</p>
+	
+		  </div>
+		</li>
+		<li class="member">
+		  <div class="member-image">
+			<img src="html5up-massively/images/EvanSun.png">
+		  </div>
+		  <div class="member-info">
+			<a href="mailto:neel.r.trivedi@gmail.com">
+			  <h3 style="color:black">Evan Sun</h3>
+			</a>
+			<p>Founding Member</p>
+	
+		  </div>
+		</li>
+		<li class="member">
+		  <div class="member-image">
+			<img src="html5up-massively/images/sahil.jpg">
+		  </div>
+		  <div class="member-info">
+			<a href="mailto:sahilscadshop@gmail.com">
+			  <h3 style="color:black">Sahil Trivedi</h3>
+			</a>
+			<p>Founding Member</p>	
+		  </div>
+	  </ul>
+	  <!-- Social media icons-->
+		<br><br><br><br><br><br><br>
+		<div class="social-icons">
+			<a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+			<a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+			<a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+			<!-- Add more social media icons as needed -->
+		</div>
+				<!--Footer-->
+				<div w3-include-html="footerfile.html"></div>
+
+	<script> 
+       function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) {
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) {
+                                elmnt.innerHTML = this.responseText;
+                            }
+                            if (this.status == 404) {
+                                elmnt.innerHTML = "Page not found.";
+                            }
+                            elmnt.removeAttribute("w3-include-html");
+                            includeHTML();
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    return;
+                }
+            }
+        };
+        includeHTML();
+        /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+	</script>
+	</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <title>TAU Berkeley</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="indexstyle1.css">
+    <style>
+        img{    
+            height: auto;
+            box-sizing: border-box; /* Include border in element's total width and height */
+            display: block; /* Remove extra space beneath the image */
+            margin: auto; /* Center the image */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar-->
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Tau</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="tools.html">Games</a>
+        <a href="blogs.html">Blog</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <!-- Logo -->
+        <img style = "border: 15px solid white; max-width: 50%;" src="html5up-massively/images/Tau logo.png" alt="Tau">
+        <br>
+        <img style = "max-width: 95%;" src="html5up-massively/images/mission.png" alt="Empowering people in the fight against neurodegenerative diseases through innovative brain-training games and comprehensive education">
+
+    <!-- Mission and Values-->
+    <div w3-include-html="mission.html"></div>
+    <!-- Buttons-->
+    <div class="center">
+        <a href="tools.html" class="button">Games</a>
+        <a href="tools.html" class="button">Blog</a>
+    </div>
+    <div class="center">
+        <a href="contactus.html" class="button">Contact Us</a>
+    </div>
+    <br> <br>
+    <!-- Social Media Icons-->
+    <div class="social-icons">
+        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        <!-- Add more social media icons as needed -->
+    </div>
+    <!-- Footer -->
+    <div class="footer" w3-include-html="footerfile.html"></div>
+
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) {
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) {
+                                elmnt.innerHTML = this.responseText;
+                            }
+                            if (this.status == 404) {
+                                elmnt.innerHTML = "Page not found.";
+                            }
+                            elmnt.removeAttribute("w3-include-html");
+                            includeHTML();
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    return;
+                }
+            }
+        };
+        includeHTML();
+        /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+
+</html>

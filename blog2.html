@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+
+<html>
+<link rel="stylesheet" href="indexstyle1.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<head lang="en-US">
+	<title>TAU Berkeley</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+</head>
+	
+	<body>
+    <!-- Navigation Bar-->
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Tau</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="tools.html">Games</a>
+        <a href="blogs.html">Blog</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+    </div>
+				<br><br><br><br><br><br><br>
+				<!-- Body -->
+				<div class="backdrop">
+						<h2> <u>This week's blog </u></h2>
+						<br>
+						<h3 style="color:black; font-weight: bold; ">Blog2</h3>
+						<p style="width: 90%; margin-left: auto; margin-right: auto;">
+							<br>
+							Our brain is the part of us that allows us to think, to dream, to speak. Our brain allows us to present to the world who we are. However, what happens when that is no longer the case? When our brain is unable to do the very things that make us– us? That is the core at what makes dementia, Alzheimer's and other brain age related neurodegenerative diseases so destructive. Fifty-five million people have dementia worldwide with the majority of them being above the age of 75. These degenerative diseases cause brain degeneration in different areas of the brain leading to the common symptoms seen in many patients: loss of memory, loss of reasoning, and forgetfulness of certain key activities. However, there is a potential treatment that might allow patients to retain their skills and brain function to a greater extent– simple brain games.
+							&nbsp;
+							<br>
+							<br>
+							Cognitive brain exercise has been shown to potentially extend the duration of time before onset of later stages of neurodegeneration. Take a study conducted by the Rush University Memory and Aging project in which 1903 people with an age average of 79.5 were studied in a longitudinal prospective study in which each participant was initially asked seven questions to assess their baseline cognitive levels. Annually each participant was involved in clinical evaluations, including medical history assessment, neurological examination, and a set of 19 cognitive tests, as well as a brain autopsy after death if they had passed. In total the study went on for an average of seven years of follow up, in which 457 of the participants developed Alzhiemer’s disease. The researchers stated that among those who had developed the disease “Low cognitive activity (score 2.1, 10th percentile) was associated with a mean onset age of 88.6 years compared to a mean onset age of 93.6 years associated with high cognitive activity (score 4.0, 90th percentile).” Through the autopsies researchers were able to reasonably eliminate confounders regarding this relation thus demonstrating a correlation between cognitive activity and Alzheimer’s progression.
+							&nbsp;
+							<br>
+							<br>
+							Cognitive activities that prolong Alzhiemer and other degenerative disease processes can be found in the relatively fun activity of playing games. Through games such as crossword puzzles, sudoku, memory games, and other puzzles. Our brain’s pathways and structure can change in order to provide a network more primed and protected for problem solving. With a daily repeated use, just simple cognitive reactivation, as well as a well balanced, healthy, lifestyle, these networks will change in a way that, theoretically, raises the threshold of damage needed to break down these pathways, thus elongating the span of disease progression.
+							&nbsp;
+							<br><br>
+							<br>
+							<br>
+							<br>
+
+							Citations:<br>
+							Cognitive Activity and Onset Age of Incident Alzheimer Disease Dementia<br>
+							Robert S. Wilson, Tianhao Wang, Lei Yu, Francine Grodstein, David A. Bennett, Patricia A. Boyle<br>
+							Neurology Aug 2021, 97 (9) e922-e929; DOI: 10.1212/WNL.0000000000012388<br>
+							Mayo Foundation for Medical Education and Research. (2023, August 30). Alzheimer’s disease. Mayo Clinic.<br>
+							<a href="https://www.mayoclinic.org/diseases-conditions/alzheimers-disease/symptoms-causes/syc-2035044">https://www.mayoclinic.org/diseases-conditions/alzheimers-disease/symptoms-causes/syc-2035044</a>
+						</p>
+				</div>
+						<br>
+						<!-- Pages-->
+						<footer>
+						<div class="pagination" style="left: 170px; position:absolute;">
+							<a href="blogs.html" class="page">1</a>
+							<a href="blog2.html" class="page active">2</a>
+							<a href="blog3.html" class="page">3</a>
+						</div>
+						</footer>
+						<br><br>
+				
+					<br><br><br><br><br><br><br>
+				<!--Footer-->
+				<div w3-include-html="footerfile.html"></div>
+
+				<script>
+					function includeHTML() {
+						var z, i, elmnt, file, xhttp;
+						z = document.getElementsByTagName("*");
+						for (i = 0; i < z.length; i++) {
+							elmnt = z[i];
+							file = elmnt.getAttribute("w3-include-html");
+							if (file) {
+								xhttp = new XMLHttpRequest();
+								xhttp.onreadystatechange = function () {
+									if (this.readyState == 4) {
+										if (this.status == 200) {
+											elmnt.innerHTML = this.responseText;
+										}
+										if (this.status == 404) {
+											elmnt.innerHTML = "Page not found.";
+										}
+										elmnt.removeAttribute("w3-include-html");
+										includeHTML();
+									}
+								}
+								xhttp.open("GET", file, true);
+								xhttp.send();
+								return;
+							}
+						}
+					};
+					includeHTML();
+					/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+					function myFunction() {
+						var x = document.getElementById("myTopnav");
+						if (x.className === "topnav") {
+							x.className += " responsive";
+						} else {
+							x.className = "topnav";
+						}
+					}
+				</script>
+	</body>
+</html>

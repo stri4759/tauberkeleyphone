@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+
+<html>
+<link rel="stylesheet" href="indexstyle1.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<head lang="en-US">
+	<title>TAU Berkeley</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+	<meta name="apple-itunes-app" content="app-id=id1193508329">
+	<meta name="google-play-app" content="app-id=com.easybrain.sudoku.android">
+
+	<style>
+        img{    
+            height: auto;
+            box-sizing: border-box; /* Include border in element's total width and height */
+            display: block; /* Remove extra space beneath the image */
+            margin: auto; /* Center the image */
+        }
+    </style>
+</head>
+	
+	<body>
+				<!-- Navigation Bar-->
+				<div class="topnav" id="myTopnav">
+					<a href="index.html" class="active">Tau</a>
+					<a href="aboutus.html">About Us</a>
+					<a href="tools.html">Games</a>
+					<a href="blogs.html">Blog</a>
+					<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+					<i class="fa fa-bars"></i>
+					</a>
+				</div>
+				<!-- Body -->
+					<div class="backdrop">
+						<br><br>
+						<h2> Memory Games</h2>
+						<p style="width: 90%; margin-left: auto; margin-right: auto;">
+							Puzzles are a great way to provide cognitive stimulation, enhance memory and focus abilities, 
+							and help improve problem solving skills. There have been studies showing that for some 
+							“participation in cognitive activities pertinent to game playing may help prevent 
+							Alzeihemer's Disease (AD) by preserving brain structures and cognitive functions vulnerable 
+							to AD pathophysiology.”
+						</p>
+					</div>
+				<br><br>
+			    <!-- Game 1: Sudoku-->
+				<a href = "https://apps.apple.com/us/app/sudoku-com-number-game/id1193508329" target = "_blank">
+					<img style="width:5%;" src = "html5up-massively/games/sudoku.webp" alt = "iOS sudoku download">
+				</a>
+				<button onclick="redirectToAppStore()">Redirect to App Store</button>
+
+				<!--	<div>
+						<br><br>
+						<h3>Jigsaw Puzzle</h3>	
+						<iframe frameborder="0" scrolling="no" style="padding-left:300px; width: 80%; height: 600px; max-height: 90vh;border:0px solid #eee; overflow:hidden;" src="https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?frm=1&url=aHR0cHM6Ly9pbWFnZXMucGV4ZWxzLmNvbS9waG90b3MvMjY2MjExNi9wZXhlbHMtcGhvdG8tMjY2MjExNi5qcGVnP2NzPXNyZ2ImZGw9cGV4ZWxzLWphaW1lLXJlaW1lci0yNjYyMTE2LmpwZyZmbT1qcGc~&nop=20"></iframe>
+
+						<br><br>
+						<h3>Sudoku</h3>
+						<iframe frameborder="0" scrolling="no" src="https://mczak.com/code/sudoku/suframe/" style="width: 100%; height: 600px; max-height: 90vh;  "  style="border:0px solid #eee; overflow:hidden; width:1000px; height:600px;" width="400"></iframe>
+					</div> -->
+				<br><br><br><br><br><br><br>
+				<!--Footer-->
+				<div w3-include-html="footerfile.html"></div>
+
+				<script>
+					function includeHTML() {
+						var z, i, elmnt, file, xhttp;
+						z = document.getElementsByTagName("*");
+						for (i = 0; i < z.length; i++) {
+							elmnt = z[i];
+							file = elmnt.getAttribute("w3-include-html");
+							if (file) {
+								xhttp = new XMLHttpRequest();
+								xhttp.onreadystatechange = function () {
+									if (this.readyState == 4) {
+										if (this.status == 200) {
+											elmnt.innerHTML = this.responseText;
+										}
+										if (this.status == 404) {
+											elmnt.innerHTML = "Page not found.";
+										}
+										elmnt.removeAttribute("w3-include-html");
+										includeHTML();
+									}
+								}
+								xhttp.open("GET", file, true);
+								xhttp.send();
+								return;
+							}
+						}
+					};
+					includeHTML();
+					/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+					function myFunction() {
+						var x = document.getElementById("myTopnav");
+						if (x.className === "topnav") {
+							x.className += " responsive";
+						} else {
+							x.className = "topnav";
+						}
+					}
+					function redirectToAppStore() {
+						var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+						if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+							window.location.href = "https://apps.apple.com/app/your-app-id";
+						} else if (/android/i.test(userAgent)) {
+							window.location.href = "https://play.google.com/store/apps/details?id=your.package.name";
+						}
+					}
+				</script>
+	</body>
+</html>
