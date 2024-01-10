@@ -27,52 +27,89 @@
 	  <h1>Founding Members</h1>
 	  </div>
 	  <ul class="list-members">
+		<!-- Neel Trivedi-->
 		<li class="member">
 		  <div class="member-image">
 			<img src="html5up-massively/images/Neel ID2 2.JPG">
 		  </div>
 		  <div class="member-info">
+			<h3 class="clickable-text" 
+				onclick="openModal('Bachelor of Engineering in Bio engineering and Public Health:',
+									'As a child I grew up next to an Alzheimer Center where I volunteered during the summer, seeing how the patient’s condition would deteriorate as the days went on, as they slowly forgot how to walk and talk moved me, and inspired me to become involved in the fight against neurodegeneration. Through Tau I aspire to work to do my part against neurodegeneration through accessible brain exercise and education about brain health, neurodegeneration, and more!'
+						)" style="color:black">Neel Trivedi</h3>
+			<div class="overlay" id="overlay" onclick="closeModal()"></div>
+			<div class="modal" id="modal">
+				<p style="font-weight:bold;" id="modal-content1"></p>
+				<p id="modal-content2"></p>
+				<button onclick="closeModal()">Close</button>
+			</div>
 			<a href="mailto:neel.r.trivedi@gmail.com">
-			  <h3 style="color:black">Neel Trivedi</h3>
-			</a>
-			<p>Founding Member</p>
-	
+			  <h4 style="color:rgb(31, 9, 238)">Contact Me</h4>
+			</a>	
 		  </div>
 		</li>
+		<!-- Armaan Nangia-->
 		<li class="member">
 		  <div class="member-image">
-			<img src="html5up-massively/images/Armaan.jpeg">
+			<img src="html5up-massively/images/Armaan.jpeg">	
 		  </div>
 		  <div class="member-info">
+			<h3 class="clickable-text" 
+				onclick="openModal('B.S in Molecular and Cell Biology & Economics:',
+									'My grandma has been diagnosed with Alzheimers so seeing the condition affect her made me want to create an impact using my current knowledge and help pursue the fight against neurodegenerative disease. I’m hoping to create a positive impact through this organization by teaching and spreading awareness about neurological conditions.'
+						)" style="color:black">Armaan Nangia</h3>
+			<div class="overlay" id="overlay" onclick="closeModal()"></div>
+			<div class="modal" id="modal">
+				<p style="font-weight:bold;" id="modal-content1"></p>
+				<p id="modal-content2"></p>
+				<button onclick="closeModal()">Close</button>
+			</div>
 			<a href="mailto:neel.r.trivedi@gmail.com">
-			  <h3 style="color:black">Armaan Nangia</h3>
-			</a>
-			<p>Founding Member</p>
-	
+			  <h4 style="color:rgb(31, 9, 238)">Contact Me</h4>
+			</a>	
 		  </div>
 		</li>
+		<!-- Evan Sun -->
 		<li class="member">
 		  <div class="member-image">
 			<img src="html5up-massively/images/EvanSun.png">
 		  </div>
 		  <div class="member-info">
+			<h3 class="clickable-text" 
+				onclick="openModal('B.S in TBD:',
+									'TBD'
+						)" style="color:black">Evan Sun</h3>
+			<div class="overlay" id="overlay" onclick="closeModal()"></div>
+			<div class="modal" id="modal">
+				<p style="font-weight:bold;" id="modal-content1"></p>
+				<p id="modal-content2"></p>
+				<button onclick="closeModal()">Close</button>
+			</div>
 			<a href="mailto:neel.r.trivedi@gmail.com">
-			  <h3 style="color:black">Evan Sun</h3>
-			</a>
-			<p>Founding Member</p>
-	
-		  </div>
+			  <h4 style="color:rgb(31, 9, 238)">Contact Me</h4>
+			</a>				
+  		  </div>
 		</li>
+		<!-- Sahil Trivedi-->
 		<li class="member">
 		  <div class="member-image">
 			<img src="html5up-massively/images/sahil.jpg">
 		  </div>
 		  <div class="member-info">
-			<a href="mailto:sahilscadshop@gmail.com">
-			  <h3 style="color:black">Sahil Trivedi</h3>
-			</a>
-			<p>Founding Member</p>	
-		  </div>
+			<h3 class="clickable-text" 
+				onclick="openModal('Sophomore in Vista Del Lago High School, Folsom:',
+									'TBD'
+						)" style="color:black">Sahil Trivedi</h3>
+			<div class="overlay" id="overlay" onclick="closeModal()"></div>
+			<div class="modal" id="modal">
+				<p style="font-weight:bold;" id="modal-content1"></p>
+				<p id="modal-content2"></p>
+				<button onclick="closeModal()">Close</button>
+			</div>
+			<a href="mailto:neel.r.trivedi@gmail.com">
+			  <h4 style="color:rgb(31, 9, 238)">Contact Me</h4>
+			</a>						  
+		</div>
 	  </ul>
 	  <!-- Social media icons-->
 		<br><br><br><br><br><br><br>
@@ -122,6 +159,18 @@
                 x.className = "topnav";
             }
         }
+		function openModal(modalContent1, modalContent2) {
+      		document.getElementById('modal').style.display = 'block';
+      		document.getElementById('overlay').style.display = 'block';
+			  // Access the parameters inside the function 
+      		document.getElementById('modal-content1').innerHTML = modalContent1;
+			document.getElementById('modal-content2').innerHTML = modalContent2;
+    	}
+
+    	function closeModal() {
+      		document.getElementById('modal').style.display = 'none';
+      		document.getElementById('overlay').style.display = 'none';
+    	}
 	</script>
 	</body>
 </html>

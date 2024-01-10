@@ -115,6 +115,7 @@
     background-color: rgb(98, 98, 200); /* Button background color on hover */
   }
   .center {
+    align-items:center;
     text-align: center;
     margin-top: 10px; /* Optional: Add space from the top */
 }

@@ -13,12 +13,19 @@
 	<meta name="google-play-app" content="app-id=com.easybrain.sudoku.android">
 
 	<style>
-        img{    
-            height: auto;
-            box-sizing: border-box; /* Include border in element's total width and height */
-            display: block; /* Remove extra space beneath the image */
-            margin: auto; /* Center the image */
-        }
+	.image-button {
+      display: inline-block; /* Make the button inline */
+      border: none; /* Remove default button border */
+      padding: 0; /* Remove default padding */
+      margin: 0; /* Remove default margin */
+      background: none; /* Remove default background */
+    }
+
+    .image-button img {
+      width: 100%; /* Make the image fill the width of the button */
+      height: auto; /* Maintain image aspect ratio */
+      display: block; /* Remove extra space beneath the image */
+    }
     </style>
 </head>
 	
@@ -46,12 +53,18 @@
 						</p>
 					</div>
 				<br><br>
+				<!-- Games -->
+				<div class="center">
 			    <!-- Game 1: Sudoku-->
-				<a href = "https://apps.apple.com/us/app/sudoku-com-number-game/id1193508329" target = "_blank">
-					<img style="width:5%;" src = "html5up-massively/games/sudoku.webp" alt = "iOS sudoku download">
-				</a>
-				<button onclick="redirectToAppStore()">Redirect to App Store</button>
-
+					<button class="image-button" onclick="redirectToAppStore_Sudoku()"><img style="width:20%;" src = "html5up-massively/games/sudoku.webp" alt = "sudoku download"> </button>
+					<br><br><br><br>
+			    <!-- Game 2: Word Puzzle -->
+					<button class="image-button" onclick="redirectToAppStore_wordPuzzle()"><img style="width:20%;" src = "html5up-massively/games/wordgame.webp" alt = "word puzzle download"> </button>
+					<br><br><br><br>
+					<!-- Game 3: Bingo -->
+						<button class="image-button" onclick="redirectToAppStore_bingo()"><img style="width:20%;" src = "html5up-massively/games/bingo.webp" alt = "word puzzle download"> </button>
+	
+				</div>
 				<!--	<div>
 						<br><br>
 						<h3>Jigsaw Puzzle</h3>	
@@ -102,14 +115,52 @@
 							x.className = "topnav";
 						}
 					}
-					function redirectToAppStore() {
+					//SUDOKU
+					function redirectToAppStore_Sudoku() {
 						var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-						if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-							window.location.href = "https://apps.apple.com/app/your-app-id";
+						//Check for iOS or Mac OS
+						if (/iPad|iPhone|iPod|Mac/.test(userAgent) && !window.MSStream) {
+							window.location.href = "https://apps.apple.com/us/app/sudoku-com-number-game/id1193508329";
+						//Check for Android
 						} else if (/android/i.test(userAgent)) {
-							window.location.href = "https://play.google.com/store/apps/details?id=your.package.name";
+							window.location.href = "https://play.google.com/store/apps/details?id=com.easybrain.sudoku.android";
+						}
+						//Check for Windows
+						else if (/Windows/.test(userAgent)) {
+							window.location.href = "https://apps.microsoft.com/detail/XPFCGPJ13R5M5J?hl=en-US&gl=US";
 						}
 					}
+					//WORD PUZZLE
+					function redirectToAppStore_wordPuzzle() {
+						var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+						//Check for iOS or Mac OS
+						if (/iPad|iPhone|iPod|Mac/.test(userAgent) && !window.MSStream) {
+							window.location.href = "https://apps.apple.com/us/app/word-search-puzzles-games/id694967269";
+						//Check for Android
+						} else if (/android/i.test(userAgent)) {
+							window.location.href = "https://play.google.com/store/apps/details?id=com.playvalve.wsjourney";
+						}
+						//Check for Windows
+						else if (/Windows/.test(userAgent)) {
+							window.location.href = "https://www.microsoft.com/en-us/p/word-search-word-puzzle-game/9nd7jbn9g5mj?activetab=pivot:overviewtab";
+						}
+					}
+
+					//BINGO
+					function redirectToAppStore_bingo() {
+						var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+						//Check for iOS or Mac OS
+						if (/iPad|iPhone|iPod|Mac/.test(userAgent) && !window.MSStream) {
+							window.location.href = "https://apps.apple.com/us/app/bingo/id546871573";
+						//Check for Android
+						} else if (/android/i.test(userAgent)) {
+							window.location.href = "https://play.google.com/store/apps/details?id=com.sharkparty.bingo";
+						}
+						//Check for Windows
+						else if (/Windows/.test(userAgent)) {
+							window.location.href = "https://apps.microsoft.com/detail/XPDM2B63F114FB";
+						}
+					}					
 				</script>
 	</body>
 </html>
