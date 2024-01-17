@@ -26,24 +26,54 @@
       height: auto; /* Maintain image aspect ratio */
       display: block; /* Remove extra space beneath the image */
     }
+
+	table {
+      width: 50%;
+      border-collapse: collapse;
+      margin-top: 20px;
+	  margin-left:auto;
+	  margin-right:auto;
+    }
+
+    th, td {
+      border: 2px solid  rgba(4, 98, 186, 0);
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: rgba(4, 98, 186, 0);
+      color: white;
+    }
+
+    td:nth-child(odd) {
+      background-color: rgba(4, 98, 186, 1);
+    }
+
+    td:nth-child(even) {
+      background-color: rgba(4, 98, 186, 1);
+    }
     </style>
 </head>
 	
 	<body>
-				<!-- Navigation Bar-->
-				<div class="topnav" id="myTopnav">
-					<a href="index.html" class="active">Tau</a>
-					<a href="aboutus.html">About Us</a>
-					<a href="tools.html">Games</a>
-					<a href="blogs.html">Blog</a>
-					<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-					<i class="fa fa-bars"></i>
-					</a>
-				</div>
+   <!-- Navigation Bar -->
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="tools.html" class="active">Games</a>
+        <a href="blogs.html">Blog</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+    </div>
+     <!-- Navigation -->
+     <!--<div class="footer" w3-include-html="navbar.html"></div> -->
+	 <br><br><br><br><br><br><br>
 				<!-- Body -->
 					<div class="backdrop">
 						<br><br>
-						<h2> Memory Games</h2>
+						<h2><u>Memory Games</u></h2>
 						<p style="width: 90%; margin-left: auto; margin-right: auto;">
 							Puzzles are a great way to provide cognitive stimulation, enhance memory and focus abilities, 
 							and help improve problem solving skills. There have been studies showing that for some 
@@ -54,17 +84,33 @@
 					</div>
 				<br><br>
 				<!-- Games -->
-				<div class="center">
-			    <!-- Game 1: Sudoku-->
-					<button class="image-button" onclick="redirectToAppStore_Sudoku()"><img style="width:20%;" src = "html5up-massively/games/sudoku.webp" alt = "sudoku download"> </button>
-					<br><br><br><br>
-			    <!-- Game 2: Word Puzzle -->
-					<button class="image-button" onclick="redirectToAppStore_wordPuzzle()"><img style="width:20%;" src = "html5up-massively/games/wordgame.webp" alt = "word puzzle download"> </button>
-					<br><br><br><br>
-					<!-- Game 3: Bingo -->
-						<button class="image-button" onclick="redirectToAppStore_bingo()"><img style="width:20%;" src = "html5up-massively/games/bingo.webp" alt = "word puzzle download"> </button>
-	
-				</div>
+				<table>
+					<thead>
+					  <tr>
+						<th style="width:20%"></th>
+						<th style="width:80%"></th>
+					  </tr>
+					</thead>
+					<tbody>
+					  <tr>
+						<!-- Game1: Sudoku-->	
+						<td>
+							<button class="image-button" onclick="redirectToAppStore_Sudoku()"><img style="width:20%;" src = "html5up-massively/games/sudoku.webp" alt = "sudoku download"> </button>
+						</td>
+						<td><p style="text-align:left; color:white;"><b>Sudoku: </b>The Sudoku app has thousands of classic sudoku puzzles to help you keep your brain active, unwind from stress or relax.</p></td>
+					  </tr>
+					  <tr>
+						<!-- Game 2: Word Puzzle -->
+						<td><button class="image-button" onclick="redirectToAppStore_wordPuzzle()"><img style="width:20%;" src = "html5up-massively/games/wordgame.webp" alt = "word puzzle download"> </button></td>
+						<td><p style="text-align:left; color:white;"><b>Word Puzzle: </b>Exercise your brain by finding hidden words and secret words in a word puzzle mesh.</p></td>
+					  </tr>
+					  <tr>
+						<!-- Game 3: Bingo -->
+						<td><button class="image-button" onclick="redirectToAppStore_bingo()"><img style="width:20%;" src = "html5up-massively/games/bingo.webp" alt = "word puzzle download"> </button></td>
+						<td><p style="text-align:left; color:white;"><b>Bingo: </b>Play Bingo like never before! Compete against your friends and use unique boosts for bonus effects like free daubs, extra coins and more. </p></td>
+					  </tr>
+					</tbody>
+				  </table>
 				<!--	<div>
 						<br><br>
 						<h3>Jigsaw Puzzle</h3>	

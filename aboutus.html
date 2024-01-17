@@ -8,22 +8,38 @@
 	<title>TAU Berkeley</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <style>
+        .bordered-text{    
+            box-sizing: border-box; /* Include border in element's total width and height */
+            display: block; /* Remove extra space beneath the image */
+            margin: auto; /* Center the image */
+			padding: 2px;
+			border: 15px solid #ffffff; 
+			border-radius: 5vw;  
+			text-align:center;			
+            max-width: 50%;
+            border-radius: 10vw;
+        }
+    </style>
 </head>
 	
 	<body>
-    <!-- Navigation Bar-->
+   <!-- Navigation Bar -->
     <div class="topnav" id="myTopnav">
-        <a href="index.html" class="active">Tau</a>
-        <a href="aboutus.html">About Us</a>
+        <a href="index.html">Home</a>
+        <a href="aboutus.html" class="active">About Us</a>
         <a href="tools.html">Games</a>
         <a href="blogs.html">Blog</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           <i class="fa fa-bars"></i>
         </a>
     </div>
+
+     <!-- Navigation -->
+    <!--<div class="footer" w3-include-html="navbar.html"></div> --> 
 	 <!-- Body of the Page -->
-	 <br><br><br>
-	 <div id="typewriter">	
+	 <br><br><br><br><br>
+	 <div id="typewriter" class="bordered-text">	
 	  <h1>Founding Members</h1>
 	  </div>
 	  <ul class="list-members">
@@ -43,9 +59,6 @@
 				<p id="modal-content2"></p>
 				<button onclick="closeModal()">Close</button>
 			</div>
-			<a href="mailto:neel.r.trivedi@gmail.com">
-			  <h4 style="color:rgb(31, 9, 238)">Contact Me</h4>
-			</a>	
 		  </div>
 		</li>
 		<!-- Armaan Nangia-->
@@ -63,10 +76,7 @@
 				<p style="font-weight:bold;" id="modal-content1"></p>
 				<p id="modal-content2"></p>
 				<button onclick="closeModal()">Close</button>
-			</div>
-			<a href="mailto:neel.r.trivedi@gmail.com">
-			  <h4 style="color:rgb(31, 9, 238)">Contact Me</h4>
-			</a>	
+			</div>	
 		  </div>
 		</li>
 		<!-- Evan Sun -->
@@ -84,10 +94,7 @@
 				<p style="font-weight:bold;" id="modal-content1"></p>
 				<p id="modal-content2"></p>
 				<button onclick="closeModal()">Close</button>
-			</div>
-			<a href="mailto:neel.r.trivedi@gmail.com">
-			  <h4 style="color:rgb(31, 9, 238)">Contact Me</h4>
-			</a>				
+			</div>			
   		  </div>
 		</li>
 		<!-- Sahil Trivedi-->
@@ -105,20 +112,9 @@
 				<p style="font-weight:bold;" id="modal-content1"></p>
 				<p id="modal-content2"></p>
 				<button onclick="closeModal()">Close</button>
-			</div>
-			<a href="mailto:neel.r.trivedi@gmail.com">
-			  <h4 style="color:rgb(31, 9, 238)">Contact Me</h4>
-			</a>						  
+			</div>						  
 		</div>
 	  </ul>
-	  <!-- Social media icons-->
-		<br><br><br><br><br><br><br>
-		<div class="social-icons">
-			<a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-			<a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-			<a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-			<!-- Add more social media icons as needed -->
-		</div>
 				<!--Footer-->
 				<div w3-include-html="footerfile.html"></div>
 

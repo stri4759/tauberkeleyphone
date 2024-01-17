@@ -1,6 +1,6 @@
 * {
     padding: 0;
-    font-family: 'Exo', sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
 
   body {
@@ -11,18 +11,27 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    margin:0;
+    padding: 0;
+    align-items:center;
+  /*  height:100vh;
+    display:flex;
+    flex-direction:column; */
   }
  /* Text related declaration */
   h1 {
     color: white;
-    font-size:50px;
     font-family:Georgia, 'Times New Roman', Times, serif;
     text-align: center;
+    font-size: 250%;
+    letter-spacing:1%;
+    margin-left:10%;
+    margin-right:10%;
 }
+
 @media screen and (max-width: 600px) {
- h1 {
-  font-size:7vw;
-    color:white;
+  h1 {
+   font-size:150%;
   }
 }
 
@@ -30,6 +39,13 @@
     color: rgba(0, 0, 0, 1);
     /*font-size: 2.5vw;*/
     font-style:bold;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+  }
+
+  h3 {
+    color: rgba(0, 0, 0, 1);
+    /*font-size: 2.5vw;*/
     font-family:Georgia, 'Times New Roman', Times, serif;
     text-align: center;
   }
@@ -46,7 +62,12 @@
 /* Navigation Bar style declaration */
 .topnav {
   overflow: hidden;
-  background-color: rgba(255,255,255,0);
+  background-color:  rgba(4, 98, 186, 1);
+  letter-spacing:1%;
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index: 1000;
 }
 
 .topnav a {
@@ -54,20 +75,18 @@
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 6vw;
+  padding: 1% 9vw;
   text-decoration: none;
   font-size: 25px;
 }
 
 .topnav a:hover {
   color: black;
-  font-weight:bold;
   background-color: rgba(255,255,255,0.2);
 }
 
 .topnav a.active {
   color: white;
-  font-weight:bold;
   background-color:rgba(0,0,0,0);
 }
 
@@ -75,16 +94,17 @@
   display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1100px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
     display: block;
     color:white;
+    padding:2%;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1100px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
@@ -108,7 +128,7 @@
     border: none;
     border-radius: 5px; /* Rounded corners */
     font-size:100%;
-    font-family: 'Exo', sans-serif; 
+    font-family: Georgia, 'Times New Roman', Times, serif; 
   }
   /* Change button style on hover */
   .button:hover {
@@ -172,6 +192,9 @@
     margin-right:auto;
     margin-top:20px;
     padding:20px;
+    border: 1vw solid  rgb(0, 0, 0); /* Border color */
+    border-radius: 3vw; /* Border radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow for a subtle effect */
   }
 /* End of backdrop for blogs and missions*/
 /* Pagination */
@@ -257,14 +280,14 @@
 }
 
   .pagination a:hover {
-    color: #18bfef;
-    border-color: #18bfef;
+    color: #030708;
+    border-color: #010101;
     z-index: 1;
   }
 
     .pagination a:hover + a,
     .pagination a:hover + span {
-      border-left-color: #18bfef;
+      border-left-color: #1f2121;
     }
 
   .pagination a.active {
