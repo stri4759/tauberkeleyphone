@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <head lang="en-US">
-	<title>TAU Berkeley</title>
+	<title>TAU Neuro - Games</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
@@ -13,12 +13,33 @@
 	<meta name="google-play-app" content="app-id=com.easybrain.sudoku.android">
 
 	<style>
+	.backdrop-game {
+    background-color:whitesmoke;
+    width: 90%; 
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:2px;
+    padding:2px;
+    border: 0.2vw solid  rgb(0, 0, 0); /* Border color */
+    border-radius: 3vw; /* Border radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow for a subtle effect */
+  	}
 	.image-button {
-      display: inline-block; /* Make the button inline */
+      display:inline-table; /* Make the button inline */
       border: none; /* Remove default button border */
       padding: 0; /* Remove default padding */
       margin: 0; /* Remove default margin */
       background: none; /* Remove default background */
+	  width: 50px;
+	  height: 50px;
+	  cursor: pointer; /* Change cursor on hover */
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow for raised effect */
+      transition: box-shadow 0.3s ease; /* Add transition for smooth effect on hover */
+    }
+
+    .image-button:hover {
+      box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Adjusted box shadow on hover */
     }
 
     .image-button img {
@@ -28,31 +49,20 @@
     }
 
 	table {
-      width: 50%;
+      width: 100%;
       border-collapse: collapse;
-      margin-top: 20px;
-	  margin-left:auto;
-	  margin-right:auto;
+      margin-top: 1px;
+	  margin-left: 1px;
+	  margin-right: 1px;
     }
 
     th, td {
       border: 2px solid  rgba(4, 98, 186, 0);
-      padding: 10px;
+      padding: 1vw;
       text-align: left;
     }
+	
 
-    th {
-      background-color: rgba(4, 98, 186, 0);
-      color: white;
-    }
-
-    td:nth-child(odd) {
-      background-color: rgba(4, 98, 186, 1);
-    }
-
-    td:nth-child(even) {
-      background-color: rgba(4, 98, 186, 1);
-    }
     </style>
 </head>
 	
@@ -71,8 +81,7 @@
      <!--<div class="footer" w3-include-html="navbar.html"></div> -->
 	 <br><br><br><br><br><br><br>
 				<!-- Body -->
-					<div class="backdrop">
-						<br><br>
+					<div class="backdrop" style="width:75%;">
 						<h2><u>Memory Games</u></h2>
 						<p style="width: 90%; margin-left: auto; margin-right: auto;">
 							Puzzles are a great way to provide cognitive stimulation, enhance memory and focus abilities, 
@@ -84,33 +93,51 @@
 					</div>
 				<br><br>
 				<!-- Games -->
-				<table>
-					<thead>
-					  <tr>
-						<th style="width:20%"></th>
-						<th style="width:80%"></th>
-					  </tr>
-					</thead>
-					<tbody>
-					  <tr>
-						<!-- Game1: Sudoku-->	
-						<td>
-							<button class="image-button" onclick="redirectToAppStore_Sudoku()"><img style="width:20%;" src = "html5up-massively/games/sudoku.webp" alt = "sudoku download"> </button>
-						</td>
-						<td><p style="text-align:left; color:white;"><b>Sudoku: </b>The Sudoku app has thousands of classic sudoku puzzles to help you keep your brain active, unwind from stress or relax.</p></td>
-					  </tr>
-					  <tr>
-						<!-- Game 2: Word Puzzle -->
-						<td><button class="image-button" onclick="redirectToAppStore_wordPuzzle()"><img style="width:20%;" src = "html5up-massively/games/wordgame.webp" alt = "word puzzle download"> </button></td>
-						<td><p style="text-align:left; color:white;"><b>Word Puzzle: </b>Exercise your brain by finding hidden words and secret words in a word puzzle mesh.</p></td>
-					  </tr>
-					  <tr>
-						<!-- Game 3: Bingo -->
-						<td><button class="image-button" onclick="redirectToAppStore_bingo()"><img style="width:20%;" src = "html5up-massively/games/bingo.webp" alt = "word puzzle download"> </button></td>
-						<td><p style="text-align:left; color:white;"><b>Bingo: </b>Play Bingo like never before! Compete against your friends and use unique boosts for bonus effects like free daubs, extra coins and more. </p></td>
-					  </tr>
-					</tbody>
-				  </table>
+				<!-- Game1: Sudoku-->
+				<div class="backdrop-game" style="width:50%;">
+					<table>
+						<thead>
+						  <tr>
+							<th style="width:10%">
+								<button class="image-button" onclick="redirectToAppStore_Sudoku()"><img src = "html5up-massively/games/sudoku.webp" alt = "sudoku download"> </button>
+							</th>					
+							<th style="width:90%">
+							   <p style="text-align:left"><b>Sudoku: </b>The Sudoku app has thousands of classic sudoku puzzles to help you keep your brain active, unwind from stress or relax.</p>
+							</th>
+						  </tr>
+						</thead> 
+					</table>
+				</div>	
+				<!-- Game2: Word Puzzle-->				
+				<div class="backdrop-game" style="width:50%;">	
+					<table>
+						<thead>
+						  <tr>
+							<th style="width:10%">
+								<button class="image-button" onclick="redirectToAppStore_Sudoku()"><img src = "html5up-massively/games/wordgame.webp" alt = "word game download"> </button>	
+							</th>					
+							<th style="width:90%">
+								<p style="text-align:left;"><b>Word Puzzle: </b>According to research, it has been found that older adults who regularly take part in word and number puzzles have sharper brains. The more often they played puzzles, the better their brain function.</p>				
+							</th>
+						  </tr>
+						</thead>
+					</table>
+				</div>
+					<!-- Game 3: Bingo -->
+				<div class="backdrop-game" style="width: 50%;">	
+					<table>
+						<thead>
+					  	<tr>
+							<th style="width:10%">	
+						  		<button class="image-button" onclick="redirectToAppStore_bingo()"><img src = "html5up-massively/games/bingo.webp" alt = "word puzzle download"> </button>
+							</th>					
+							<th style="width:90%">
+						  		<p style="text-align:left;"><b>Bingo: </b>Play Bingo like never before! Compete against your friends and use unique boosts for bonus effects like free daubs, extra coins and more. </p>
+							</th>
+					  	</tr>
+						</thead>
+					</table>
+				</div>
 				<!--	<div>
 						<br><br>
 						<h3>Jigsaw Puzzle</h3>	

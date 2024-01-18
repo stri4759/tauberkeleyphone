@@ -62,7 +62,7 @@
 /* Navigation Bar style declaration */
 .topnav {
   overflow: hidden;
-  background-color:  rgba(4, 98, 186, 1);
+  background-color:rgba(0, 79, 153, 0.981);
   letter-spacing:1%;
   position:fixed;
   top:0;
@@ -169,10 +169,9 @@
 
     /* Linkedin */
     .fa-linkedin {
-        background: #55ACEE;
-        color: white;
         padding: 10px;
         font-size: 35px;
+        border-radius: 5px;
     }
 
     /* Instagram */
@@ -192,7 +191,7 @@
     margin-right:auto;
     margin-top:20px;
     padding:20px;
-    border: 1vw solid  rgb(0, 0, 0); /* Border color */
+    border: 0.2vw solid  rgb(0, 0, 0); /* Border color */
     border-radius: 3vw; /* Border radius for rounded corners */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow for a subtle effect */
   }
