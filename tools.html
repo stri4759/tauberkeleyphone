@@ -8,10 +8,6 @@
 	<title>TAU Neuro - Games</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-
-	<meta name="apple-itunes-app" content="app-id=id1193508329">
-	<meta name="google-play-app" content="app-id=com.easybrain.sudoku.android">
-
 	<style>
 	.backdrop-game {
     background-color:whitesmoke;
@@ -22,12 +18,21 @@
     margin-top:2px;
     padding:2px;
     border: 0.2vw solid  rgb(0, 0, 0); /* Border color */
-    border-radius: 3vw; /* Border radius for rounded corners */
+    border-radius: 2vw; /* Border radius for rounded corners */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow for a subtle effect */
   	}
+	.button-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
+      gap: 10px; /* Adjust the gap between buttons as needed */
+	  padding:10px;
+	  justify-content: center; /* Center horizontally within the grid */
+      align-items: center; /* Center vertically within the grid */
+    }
+
 	.image-button {
-      display:inline-table; /* Make the button inline */
-      border: none; /* Remove default button border */
+      /*display:inline-flex; /* Make the button inline */
+      border: none; /*Remove default button border */
       padding: 0; /* Remove default padding */
       margin: 0; /* Remove default margin */
       background: none; /* Remove default background */
@@ -36,6 +41,8 @@
 	  cursor: pointer; /* Change cursor on hover */
       box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow for raised effect */
       transition: box-shadow 0.3s ease; /* Add transition for smooth effect on hover */
+	  justify-content: center; /* Center horizontally within the grid */
+      align-items: center; /* Center vertically within the grid */
     }
 
     .image-button:hover {
@@ -45,15 +52,15 @@
     .image-button img {
       width: 100%; /* Make the image fill the width of the button */
       height: auto; /* Maintain image aspect ratio */
-      display: block; /* Remove extra space beneath the image */
+      /*display: block; /* Remove extra space beneath the image */
     }
 
 	table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 1px;
-	  margin-left: 1px;
-	  margin-right: 1px;
+      margin-top: 10px;
+	  margin-left: 10px;
+	  margin-right: 10px;
     }
 
     th, td {
@@ -93,28 +100,38 @@
 					</div>
 				<br><br>
 				<!-- Games -->
+				<div class="backdrop" style="width:75%">
+				  <div class="button-grid">
+					<button class="image-button" onclick="window.location.href = redirectToAppStore('id1193508329','com.easybrain.sudoku.android','XPFCGPJ13R5M5J')"><img src = "html5up-massively/games/sudoku.webp" alt = "sudoku download"> </button>
+					<button class="image-button" onclick="window.location.href = redirectToAppStore('id694967269','com.playvalve.wsjourney','9WZDNCRDJ9XS')"><img src = "html5up-massively/games/wordgame.webp" alt = "word game download"> </button>
+					<button class="image-button" onclick="window.location.href = redirectToAppStore('id546871573','com.sharkparty.bingo','XPDM2B63F114FB')"><img src = "html5up-massively/games/bingo.webp" alt = "word puzzle download"> </button>
+					<h3 style="text-align:left;">Sudoku</h3>
+					<h3 style="text-align:left;">Word Puzzle</h3>
+					<h3 style="text-align:left;">Bingo</h3>
+				  </div>
+				</div>
 				<!-- Game1: Sudoku-->
-				<div class="backdrop-game" style="width:50%;">
+				<!--<div class="backdrop-game" style="width:50%;">
 					<table>
 						<thead>
 						  <tr>
 							<th style="width:10%">
-								<button class="image-button" onclick="redirectToAppStore_Sudoku()"><img src = "html5up-massively/games/sudoku.webp" alt = "sudoku download"> </button>
-							</th>					
-							<th style="width:90%">
-							   <p style="text-align:left"><b>Sudoku: </b>The Sudoku app has thousands of classic sudoku puzzles to help you keep your brain active, unwind from stress or relax.</p>
+								<button class="image-button" onclick="window.location.href = redirectToAppStore('id1193508329','com.easybrain.sudoku.android','XPFCGPJ13R5M5J')"><img src = "html5up-massively/games/sudoku.webp" alt = "sudoku download"> </button>
+							</th>
+						    <th style="width:90%">
+								<p style="text-align:left;"><b>Sudoku: </b>The Sudoku app has thousands of classic sudoku puzzles to help you keep your brain active, unwind from stress or relax.</p>				
 							</th>
 						  </tr>
-						</thead> 
+						</thead> 				
 					</table>
-				</div>	
+				</div>	-->
 				<!-- Game2: Word Puzzle-->				
-				<div class="backdrop-game" style="width:50%;">	
+				<!--<div class="backdrop-game" style="width:50%;">	
 					<table>
 						<thead>
 						  <tr>
 							<th style="width:10%">
-								<button class="image-button" onclick="redirectToAppStore_Sudoku()"><img src = "html5up-massively/games/wordgame.webp" alt = "word game download"> </button>	
+								<button class="image-button" onclick="window.location.href = redirectToAppStore('id694967269','com.playvalve.wsjourney','9WZDNCRDJ9XS')"><img src = "html5up-massively/games/wordgame.webp" alt = "word game download"> </button>	
 							</th>					
 							<th style="width:90%">
 								<p style="text-align:left;"><b>Word Puzzle: </b>According to research, it has been found that older adults who regularly take part in word and number puzzles have sharper brains. The more often they played puzzles, the better their brain function.</p>				
@@ -122,14 +139,14 @@
 						  </tr>
 						</thead>
 					</table>
-				</div>
+				</div>-->
 					<!-- Game 3: Bingo -->
-				<div class="backdrop-game" style="width: 50%;">	
+				<!--<div class="backdrop-game" style="width: 50%;">	
 					<table>
 						<thead>
 					  	<tr>
 							<th style="width:10%">	
-						  		<button class="image-button" onclick="redirectToAppStore_bingo()"><img src = "html5up-massively/games/bingo.webp" alt = "word puzzle download"> </button>
+						  		<button class="image-button" onclick="window.location.href = redirectToAppStore('id546871573','com.sharkparty.bingo','XPDM2B63F114FB')"><img src = "html5up-massively/games/bingo.webp" alt = "word puzzle download"> </button>
 							</th>					
 							<th style="width:90%">
 						  		<p style="text-align:left;"><b>Bingo: </b>Play Bingo like never before! Compete against your friends and use unique boosts for bonus effects like free daubs, extra coins and more. </p>
@@ -137,21 +154,13 @@
 					  	</tr>
 						</thead>
 					</table>
-				</div>
-				<!--	<div>
-						<br><br>
-						<h3>Jigsaw Puzzle</h3>	
-						<iframe frameborder="0" scrolling="no" style="padding-left:300px; width: 80%; height: 600px; max-height: 90vh;border:0px solid #eee; overflow:hidden;" src="https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?frm=1&url=aHR0cHM6Ly9pbWFnZXMucGV4ZWxzLmNvbS9waG90b3MvMjY2MjExNi9wZXhlbHMtcGhvdG8tMjY2MjExNi5qcGVnP2NzPXNyZ2ImZGw9cGV4ZWxzLWphaW1lLXJlaW1lci0yNjYyMTE2LmpwZyZmbT1qcGc~&nop=20"></iframe>
-
-						<br><br>
-						<h3>Sudoku</h3>
-						<iframe frameborder="0" scrolling="no" src="https://mczak.com/code/sudoku/suframe/" style="width: 100%; height: 600px; max-height: 90vh;  "  style="border:0px solid #eee; overflow:hidden; width:1000px; height:600px;" width="400"></iframe>
-					</div> -->
-				<br><br><br><br><br><br><br>
+				</div>-->
+				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 				<!--Footer-->
 				<div w3-include-html="footerfile.html"></div>
 
 				<script>
+					/*Function to include other files*/
 					function includeHTML() {
 						var z, i, elmnt, file, xhttp;
 						z = document.getElementsByTagName("*");
@@ -178,6 +187,7 @@
 							}
 						}
 					};
+					/*Function for navigation bar behavior with screen type*/
 					includeHTML();
 					/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 					function myFunction() {
@@ -188,52 +198,22 @@
 							x.className = "topnav";
 						}
 					}
-					//SUDOKU
-					function redirectToAppStore_Sudoku() {
-						var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-						//Check for iOS or Mac OS
-						if (/iPad|iPhone|iPod|Mac/.test(userAgent) && !window.MSStream) {
-							window.location.href = "https://apps.apple.com/us/app/sudoku-com-number-game/id1193508329";
-						//Check for Android
-						} else if (/android/i.test(userAgent)) {
-							window.location.href = "https://play.google.com/store/apps/details?id=com.easybrain.sudoku.android";
-						}
-						//Check for Windows
-						else if (/Windows/.test(userAgent)) {
-							window.location.href = "https://apps.microsoft.com/detail/XPFCGPJ13R5M5J?hl=en-US&gl=US";
-						}
-					}
-					//WORD PUZZLE
-					function redirectToAppStore_wordPuzzle() {
-						var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-						//Check for iOS or Mac OS
-						if (/iPad|iPhone|iPod|Mac/.test(userAgent) && !window.MSStream) {
-							window.location.href = "https://apps.apple.com/us/app/word-search-puzzles-games/id694967269";
-						//Check for Android
-						} else if (/android/i.test(userAgent)) {
-							window.location.href = "https://play.google.com/store/apps/details?id=com.playvalve.wsjourney";
-						}
-						//Check for Windows
-						else if (/Windows/.test(userAgent)) {
-							window.location.href = "https://www.microsoft.com/en-us/p/word-search-word-puzzle-game/9nd7jbn9g5mj?activetab=pivot:overviewtab";
-						}
-					}
 
-					//BINGO
-					function redirectToAppStore_bingo() {
+					/*Function for game links*/
+					function redirectToAppStore(idAppStore, idGoogleStore, idWindowsStore) {
 						var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 						//Check for iOS or Mac OS
 						if (/iPad|iPhone|iPod|Mac/.test(userAgent) && !window.MSStream) {
-							window.location.href = "https://apps.apple.com/us/app/bingo/id546871573";
+							return `https://apps.apple.com/app/${idAppStore}`;
 						//Check for Android
 						} else if (/android/i.test(userAgent)) {
-							window.location.href = "https://play.google.com/store/apps/details?id=com.sharkparty.bingo";
+							return `https://play.google.com/store/apps/details?id=${idGoogleStore}`;
 						}
 						//Check for Windows
 						else if (/Windows/.test(userAgent)) {
-							window.location.href = "https://apps.microsoft.com/detail/XPDM2B63F114FB";
+							return `https://apps.microsoft.com/detail/${idWindowsStore}`;
 						}
-					}					
+					}				
 				</script>
 	</body>
 </html>
