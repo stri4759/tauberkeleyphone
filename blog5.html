@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+
+<html>
+<link rel="stylesheet" href="indexstyle1.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<head lang="en-US">
+	<title>TAU Neuro - Blogs</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+</head>
+	
+	<body>
+   <!-- Navigation Bar -->
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="tools.html">Games</a>
+        <a href="blogs.html" class="active">Blog</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+    </div>
+				<br><br><br><br><br><br><br>
+				<!-- Body -->
+				<div class="backdrop">
+						<h2> <u>Blogs!</u></h2>
+						<br>
+						<h3 style="color:black; font-weight: bold; ">A Game-Changer in Alzheimer's Diagnosis: A Cost-Effective Two-Step Blood Test</h3>
+						<p style="width: 90%; margin-left: auto; margin-right: auto;">
+							<br>
+							Alzheimer's disease (AD) is a devastating condition, and with recent developments in anti-AD therapies, there's a growing need for cost-effective methods 
+							to identify AD-related changes in patients with cognitive impairment. A new study explores the potential of blood biomarkers to revolutionize AD diagnosis, 
+							reducing the need for more invasive and costly procedures.
+							&nbsp;
+							<br>
+							<br>
+							Researchers conducted a study involving 348 patients with mild cognitive impairment (MCI) in two separate memory clinic-based cohorts. 
+							They aimed to develop a two-step diagnostic workflow for detecting amyloid-β (Aβ) positivity, a hallmark of AD, by incorporating blood-based 
+							biomarkers.
+							&nbsp;
+							<br>
+							<br>
+							<u>The Two-Step Workflow: </u> <br>
+							Step 1: A Blood-Based Model In the first step, the researchers developed a blood-based model that considered three key factors: 
+							plasma tau protein 217 (p-tau217) levels, age, and the presence of the APOE ε4 gene variant. This model accurately stratified patients 
+							into low, intermediate, or high-risk groups for Aβ positivity. It demonstrated excellent accuracy, with an area under the curve (AUC) 
+							of 89.3% in the initial cohort and 94.3% in the validation cohort.<br>
+							Step 2: Confirmatory Testing In the second step, patients in the intermediate-risk group were referred for cerebrospinal fluid (CSF) 
+							Aβ42/Aβ40 testing, while those in the low- and high-risk groups had their Aβ status determined solely based on the blood-based model 
+							from step 1.
+							<br><br>
+							Depending on the chosen risk threshold in step 1 (lenient, moderate, or stringent), the two-step workflow achieved an overall accuracy 
+							of 88.2%, 90.5%, or 92.0% in detecting Aβ-PET status. Importantly, it significantly reduced the number of necessary CSF tests by 85.9%, 
+							72.7%, or 61.2%, respectively. <br><br>
+							Secondary analyses further confirmed the effectiveness of this approach in a different cohort using an adapted version of the blood-based 
+							model. This demonstrates its robustness across various patient populations. <br><br>
+							In conclusion, this groundbreaking study presents a promising avenue for cost-effective AD diagnosis in memory clinic settings. 
+							By utilizing a simple blood test that factors in p-tau217 levels, age, and APOE ε4 status, clinicians can accurately stratify patients, 
+							reducing the need for more invasive and expensive procedures like CSF or positron emission tomography (PET) tests. This two-step workflow 
+							not only enhances diagnostic accuracy but also offers a more accessible and affordable means of detecting AD pathology. It represents 
+							a significant step forward in the fight against Alzheimer's disease and offers hope for earlier detection and intervention.
+
+							&nbsp;
+							<br><br>
+							<br>
+							<br>
+							<br>
+
+							Citations:
+							<br>
+							Brum, W.S., Cullen, N.C., Janelidze, S. et al. A two-step workflow based on plasma p-tau217 to screen for amyloid β positivity with further confirmatory testing only in uncertain cases. Nat Aging 3,
+
+							 1079–1090 (2023).
+							<a href="https://www.nature.com/articles/s43587-023-00471-5">https://www.nature.com/articles/s43587-023-00471-5</a>
+						</p>
+				</div>
+						<br>
+						<!-- Pages-->
+						<div class="pagination" style="left: 170px; position:absolute;">
+							<a href="blogs.html" class="page">1</a>
+							<a href="blog2.html" class="page">2</a>
+							<a href="blog3.html" class="page">3</a>
+							<a href="blog4.html" class="page">4</a>
+							<a href="blog5.html" class="page active">5</a>
+							<a href="blog6.html" class="page">6</a>
+						</div>
+						<br><br>
+				
+					<br><br><br><br><br><br><br>
+				<!--Footer-->
+				<div w3-include-html="footerfile.html"></div>
+
+				<script>
+					function includeHTML() {
+						var z, i, elmnt, file, xhttp;
+						z = document.getElementsByTagName("*");
+						for (i = 0; i < z.length; i++) {
+							elmnt = z[i];
+							file = elmnt.getAttribute("w3-include-html");
+							if (file) {
+								xhttp = new XMLHttpRequest();
+								xhttp.onreadystatechange = function () {
+									if (this.readyState == 4) {
+										if (this.status == 200) {
+											elmnt.innerHTML = this.responseText;
+										}
+										if (this.status == 404) {
+											elmnt.innerHTML = "Page not found.";
+										}
+										elmnt.removeAttribute("w3-include-html");
+										includeHTML();
+									}
+								}
+								xhttp.open("GET", file, true);
+								xhttp.send();
+								return;
+							}
+						}
+					};
+					includeHTML();
+					/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+					function myFunction() {
+						var x = document.getElementById("myTopnav");
+						if (x.className === "topnav") {
+							x.className += " responsive";
+						} else {
+							x.className = "topnav";
+						}
+					}
+				</script>
+	</body>
+</html>

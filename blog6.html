@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+
+<html>
+<link rel="stylesheet" href="indexstyle1.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<head lang="en-US">
+	<title>TAU Neuro - Blogs</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+</head>
+	
+	<body>
+   <!-- Navigation Bar -->
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="tools.html">Games</a>
+        <a href="blogs.html" class="active">Blog</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+    </div>
+     <!-- Navigation -->
+     <!--<div class="footer" w3-include-html="navbar.html"></div> -->
+				<br><br><br><br><br><br><br>
+				<!-- Body -->
+				<div class="backdrop">
+						<h2> <u>Blogs!</u></h2>
+						<br>
+						<h3 style="color:black; font-weight: bold; ">Unraveling the Mystery of Epilepsy: Current Understanding and Ongoing Research Efforts</h3>
+						<p style="width: 90%; margin-left: auto; margin-right: auto;">
+							<br>
+							Epilepsy, a neurological disorder characterized by recurrent seizures, has mystified scientists and medical professionals for centuries. 
+							Despite significant progress in understanding this condition, there is still much to learn about its causes and potential cures. 
+							In this blog, we will explore what we currently know about epilepsy and the relentless efforts that are being made to find a cure.
+							<br><br>
+							Approximately 65 million people worldwide are affected by epilepsy, making it one of the most common neurological disorders. 
+							It is a single disease but rather a group of disorders with various causes, triggers, and symptoms. Seizures, the hallmark of epilepsy, 
+							occur when there is abnormal electrical activity in the brain. These seizures can manifest in different ways, from momentary lapses 
+							in consciousness to convolutions.  
+							<br><br>
+							What are the causes of epilepsy? Well, epilepsy can be the result of various factors, including genetic predisposition, brain injuries, 
+							infections, or even structural abnormalities in the brain. In some cases, the cause remains unknown. Understanding the underlying causes 
+							of epilepsy is crucial for developing targeted treatments and potential cures. 
+							<br><br>
+							While epilepsy cannot always be cured, it can often be managed effectively with medication, lifestyle modifications, or surgical 
+							interventions. Anti-epileptic drugs help to control seizures in many individuals, allowing them to live relatively normal lives. 
+							However, these drugs often have side effects, and not all patients respond well to them. 
+							<br><br>
+							There are multiple angles in which research is being carried out to flesh out the characteristics of epilepsy. Efforts within genetics, 
+							neurostimulation, and stem cell therapy are among the leading research areas for developing a cure. 
+							<br>
+							<b><u>Genetic Research:</u></b> There have been advances in identifying genes associated with epilepsy. 
+							Having this knowledge lends itself nicely to helping in early diagnosis and targeted treatments. 
+							Gene therapies are being explored as a potential cure for some forms of epilepsy. 
+							<br>
+							<b><u>Neurostimulation:</u></b> For individuals that do not react well to medication, development of devices such as vagus nerve stimulation 
+							(VNS) and responsive neurostimulation (RNS) exist to help control seizures in a different way. Refinement and improvement in this 
+							technology is deeply focused on in research. 
+							<br>
+							<b><u>Stem Cell Therapy:</u></b> Using stem cells has been of primary interest to researchers as stem cells can be integral in repairing damaged 
+							brain tissue. They can also be used to reduce the frequency and severity of seizures. Stem cells are highly experimental, yet it 
+							holds promise for the future. 
+							<br><br>
+							While a complete cure for epilepsy remains elusive, our understanding of this disorder is deepening, and innovative research efforts 
+							continue to pave the way for better treatments and, ultimately, a cure. As science and technology advance, we can look forward to 
+							a future where epilepsy is better understood and more manageable for everyone living with this condition. 
+							&nbsp;
+							<br><br>
+							<br>
+							<br>
+							<br>
+
+							Citations:
+							<br>
+							
+								Thakur KT, Albanese E, Giannakopoulos P, et al. Neurological Disorders. In: Patel V, Chisholm D, Dua T, et al., editors. Mental, Neurological, and Substance Use Disorders: Disease Control Priorities, Third Edition (Volume 4). Washington (DC): The International Bank for Reconstruction and Development / The World Bank; 2016 Mar 14. Chapter 5. Available from:
+								<a href="https://www.ncbi.nlm.nih.gov/books/NBK361950/">https://www.ncbi.nlm.nih.gov/books/NBK361950/</a>
+								doi: 10.1596/978-1-4648-0426-7_ch5
+							  </p>
+							  
+							
+				</div>
+						<br>
+						<!-- Pages-->
+						<div class="pagination" style="left: 170px; position:absolute;">
+							<a href="blogs.html" class="page">1</a>
+							<a href="blog2.html" class="page">2</a>
+							<a href="blog3.html" class="page">3</a>
+							<a href="blog4.html" class="page">4</a>
+							<a href="blog5.html" class="page">5</a>
+							<a href="blog6.html" class="page active">6</a>
+						</div>
+						<br><br>
+				
+					<br><br><br><br><br><br><br>
+				<!--Footer-->
+				<div w3-include-html="footerfile.html"></div>
+
+				<script>
+					function includeHTML() {
+						var z, i, elmnt, file, xhttp;
+						z = document.getElementsByTagName("*");
+						for (i = 0; i < z.length; i++) {
+							elmnt = z[i];
+							file = elmnt.getAttribute("w3-include-html");
+							if (file) {
+								xhttp = new XMLHttpRequest();
+								xhttp.onreadystatechange = function () {
+									if (this.readyState == 4) {
+										if (this.status == 200) {
+											elmnt.innerHTML = this.responseText;
+										}
+										if (this.status == 404) {
+											elmnt.innerHTML = "Page not found.";
+										}
+										elmnt.removeAttribute("w3-include-html");
+										includeHTML();
+									}
+								}
+								xhttp.open("GET", file, true);
+								xhttp.send();
+								return;
+							}
+						}
+					};
+					includeHTML();
+					/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+					function myFunction() {
+						var x = document.getElementById("myTopnav");
+						if (x.className === "topnav") {
+							x.className += " responsive";
+						} else {
+							x.className = "topnav";
+						}
+					}
+				</script>
+	</body>
+</html>
